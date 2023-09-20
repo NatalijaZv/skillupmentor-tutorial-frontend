@@ -29,7 +29,7 @@ const RegisterForm: FC = () => {
   const onSubmit = handleSubmit(async (data: RegisterUserFields) => {
     if (!file) return
     const response = await API.register(data)
-    if (response.data?.statusCode === StatusCode.BAD_REQUEST) {
+    if (response?.data?.statusCode === StatusCode.BAD_REQUEST) {
       setApiError(response.data.message)
       setShowError(true)
     } else if (response.data?.statusCode === StatusCode.INTERNAL_SERVER_ERROR) {
@@ -75,7 +75,7 @@ const RegisterForm: FC = () => {
             setShowError(true)
           } else {
             authStore.login(userResponse.data)
-            navigate('/')
+            navigate(routes.HOME)
           }
         }
       }
@@ -99,8 +99,8 @@ const RegisterForm: FC = () => {
       reader.onloadend = () => {
         setPreview(reader.result as string)
         setFileError(false)
-        reader.readAsDataURL(file)
       }
+      reader.readAsDataURL(file)
     } else {
       setPreview(null)
     }
@@ -110,8 +110,9 @@ const RegisterForm: FC = () => {
     <>
       <Form className="register-form" onSubmit={onSubmit}>
         <Form.Group className="d-flex flex-column justify-content-center align-items-center">
-          <FormLabel htmlFor="avatar" id="avatar-p"></FormLabel>
-          <Avatar round src={preview as string} alt="Avatar" />
+          <FormLabel htmlFor="avatar" id="avatar-p">
+            <Avatar round src={preview as string} alt="Avatar" />
+          </FormLabel>
           <input
             onChange={handleFileChange}
             id="avatar"

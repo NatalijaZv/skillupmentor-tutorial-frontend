@@ -16,7 +16,6 @@ export const useLoginForm = () => {
   const {
     handleSubmit,
     formState: { errors },
-    reset,
     control,
   } = useForm({
     defaultValues: {
@@ -26,7 +25,7 @@ export const useLoginForm = () => {
     mode: 'onSubmit',
     resolver: yupResolver(LoginSchema),
   })
-  return { handleSubmit, errors, reset, control }
+  return { handleSubmit, errors, control }
 }
 export {}
 export type LoginForm = ReturnType<typeof useLoginForm>
