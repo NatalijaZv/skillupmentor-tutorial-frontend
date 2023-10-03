@@ -34,7 +34,7 @@ const Topbar: FC = () => {
           {isMobile ? (
             <Link
               className="btn btn-dark text-decoration-none text-light me-3"
-              to={`${routes.DASHBOARD_PREFIX}/users`}
+              to={`${routes.DASHBOARD_PREFIX}/users/edit`}
               state={{
                 id: authStore.user?.id,
                 first_name: authStore.user?.first_name,
