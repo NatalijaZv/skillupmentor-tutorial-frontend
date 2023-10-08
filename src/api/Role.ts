@@ -1,7 +1,7 @@
 import { apiRoutes } from 'constants/apiConstants'
 import { apiRequest } from './Api'
 import { PermissionType, RoleType } from 'models/role'
-import { CreateUpdateRoleFields } from 'hooks/useCreateUpdateRole'
+import { CreateUpdateRoleFields } from 'hooks/react-hook-form/useCreateUpdateRole'
 
 export const fetchRoles = async () =>
   apiRequest<undefined, RoleType>('get', apiRoutes.ROLES_PREFIX)

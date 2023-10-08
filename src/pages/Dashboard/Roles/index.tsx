@@ -11,7 +11,7 @@ import { RoleType } from 'models/role'
 import { StatusCode } from 'constants/errorConstants'
 import authStore from 'stores/auth.store'
 
-const DashboardRolesEdit: FC = () => {
+const DashboardRoles: FC = () => {
   const [apiError, setApiError] = useState('')
   const [showError, setShowError] = useState(false)
 
@@ -138,4 +138,4 @@ const DashboardRolesEdit: FC = () => {
   )
 }
 
-export default DashboardRolesEdit
+export default DashboardRoles
