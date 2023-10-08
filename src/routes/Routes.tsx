@@ -1,4 +1,4 @@
-import { Children, FC, lazy, Suspense } from 'react'
+import { FC, lazy, Suspense } from 'react'
 import { Route, RouteProps, Routes as Switch } from 'react-router-dom'
 
 import PrivateRoute from './PrivateRoute'

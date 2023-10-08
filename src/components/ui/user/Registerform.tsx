@@ -19,7 +19,7 @@ import { observer } from 'mobx-react'
 
 const RegisterForm: FC = () => {
   const navigate = useNavigate()
-  const { handleSubmit, errors, control, reset } = useRegisterForm()
+  const { handleSubmit, errors, control } = useRegisterForm()
   const [apiError, setApiError] = useState('')
   const [showError, setShowError] = useState(false)
 

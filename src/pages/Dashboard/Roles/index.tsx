@@ -1,5 +1,4 @@
 import DashboardLayout from 'components/ui/DashboardLayout'
-import CreateUpdateRoleForm from 'components/ui/role/CreateUpdateRoleForm'
 import React, { FC, useState } from 'react'
 import { Button, Table, Toast, ToastContainer } from 'react-bootstrap'
 import * as API from 'api/Api'
@@ -9,7 +8,6 @@ import { Link } from 'react-router-dom'
 import { routes } from 'constants/routesConstants'
 import { RoleType } from 'models/role'
 import { StatusCode } from 'constants/errorConstants'
-import authStore from 'stores/auth.store'
 
 const DashboardRoles: FC = () => {
   const [apiError, setApiError] = useState('')
