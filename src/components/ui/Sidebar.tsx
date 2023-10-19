@@ -27,7 +27,7 @@ const sidebarItems: ISidebarItem[] = [
   },
   {
     title: 'Products',
-    href: `${routes.DASHBOARD_PREFIX}/product`,
+    href: `${routes.DASHBOARD_PREFIX}/products`,
   },
   {
     title: 'Orders',
